@@ -323,3 +323,4 @@ pyrightconfig.json
 
 
 local_models/
+deploy.sh
