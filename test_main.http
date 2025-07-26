@@ -16,3 +16,37 @@ Authorization: Bearer wrong-key
 
 ### 인증 헤더 없이 요청 (401 에러 발생)
 GET http://localhost:8000/embed?text=테스트
+
+### 벌크 임베딩 요청 (기본 API 키)
+POST http://localhost:8000/embed/bulk
+Authorization: Bearer default-embedding-key-2024
+Content-Type: application/json
+
+{
+  "texts": [
+    "안녕하세요",
+    "Hello world",
+    "This is a test",
+    "벌크 처리 테스트입니다"
+  ]
+}
+
+### 벌크 임베딩 요청 (많은 텍스트)
+POST http://localhost:8000/embed/bulk
+Authorization: Bearer default-embedding-key-2024
+Content-Type: application/json
+
+{
+  "texts": [
+    "첫 번째 문장입니다",
+    "두 번째 문장입니다", 
+    "세 번째 문장입니다",
+    "네 번째 문장입니다",
+    "다섯 번째 문장입니다",
+    "여섯 번째 문장입니다",
+    "일곱 번째 문장입니다",
+    "여덟 번째 문장입니다",
+    "아홉 번째 문장입니다",
+    "열 번째 문장입니다"
+  ]
+}
